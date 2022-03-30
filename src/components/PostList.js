@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchPost } from "../actions";
+import { fetchPostAndUsers } from "../actions";
 import HeaderUser from "./HeaderUser";
 
 const PostList = (props) => {
   useEffect(() => {
-    props.dispatch(fetchPost());
+    props.dispatch(fetchPostAndUsers());
   }, []);
 
   const render = props? props.posts?.map((post, idx) => (

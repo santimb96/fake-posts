@@ -4,12 +4,12 @@ import { fetchUser } from "../actions";
 
 const HeaderUser = (props) => {
 
-    useEffect(()=> {
-         props.dispatch(fetchUser(props.userId));
-    }, []);
+
+    // useEffect(()=> {
+    //     props.dispatch(fetchUser(props.userId));
+    // }, [])
 
     const render = props.user.id === props.userId ? <h1>{props.user.name}</h1> : <p>no hay!</p>;
-    console.log(props.user.id, props.userId );
     return (
         <div>
             {render}
